@@ -101,5 +101,6 @@ dist
 .dynamodb/
 
 ./gs.js
+./public/premium
 # TernJS port file
 .tern-port
