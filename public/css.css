@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.hidden {
+    display: none!important;
+}
+:root {
+    --prim: #a1dfdd;
+    --second: darkcyan;
+    --dark: black;
+    --light: white;
+}
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+#contain {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    min-height: 80vh;
+    background: linear-gradient(0deg, var(--dark) 80%, var(--prim));
+    color: var(--light);
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+p {
+    max-width: 100%;
+    padding: 10px 20px;
+    font-size: .9rem;
+}
+h1 {
+    max-width: 100%;
+    padding: 15px;
+    font-size: 1.4rem;
+}
+str-pay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 90vh;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0px;
+    background-color: var(--light);
+    border-radius: 5px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    box-shadow: 0 -5px 5px var(--prim);
+}
+#foot {
+    background-color:black;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px 0px;
+    margin: 0;
+    color: var(--prim);
+    cursor: default;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:hover {
+    color: var(--light);
+}
+#logo {
+    max-width: 20%;
+}
+#head {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+@media screen and (min-width: 1080px) {
+    #logo {
+        max-width: 40%;
+    }
+    #contain {
+        width: auto;
+        padding: 20px 10%;
+        padding-bottom: 100px;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Our Time to Shine</title>
+        <meta name="description" content="Purchase your copy of the show from our website. Available for both DVD and digital downloads.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-width=1, minimum-width=1, user-scalable=no">
+        <script src="https://js.stripe.com/v3/"></script>
+        <script type="text/javascript">
+            var stripe = Stripe('pk_test_51Gqpv5JIYGhFJULGyuw1ZcOEaBJuyT7Qd3y4Jo2XcVJM4vJnr7Skj8aWHQ1NrSwYo10lVkQRcPxBRFC91nElvlV100QQVvS5Z8');
+            var elements = stripe.elements();
+        </script>
+        <script src="/static/checkout.js"></script>
+    </head>
+    <link rel="stylesheet" href="/static/css.css">
+    <body>
+        <div id="contain">
+            <div id="head">
+            <a href="https://wagnerdancearts.com"><img id="logo" src="https://influenced.link/static/wdalogo.png"></a>
+            <h1>OUR TIME TO SHINE</h1>
+            <img style="max-width: 50%; border-radius: 10px; box-shadow: 1px -3px 4px #a1dfdd50;" src="https://samwagnermedia.com/static/portfolio/wdastore.jpg">
+            <p>Thank you for being part of our Wagner Dance family, we are so grateful that we were able to have such an amazing production for Summer 2020. Please use our store to purchase your copy of the show for digital download or DVD. <br><strong>DVD purchases available for pickup at the studio.</strong></p></div>
+            <div id="checkout"></div>
+            <div id="cardbox"></div>
+        </div>
+        <div id="foot">
+            Wagner Dance Arts © 2020, <a href="https://samwagnermedia.com/">Website Built by Idea Design Media™</a>
+        </div>
+    </body>
+    <script>
+        let container = document.querySelector('#checkout')
+        requestProducts().then(() => {
+            container.append(document.createElement('checkout-div'))
+        }).catch(e => {console.log(e);})
+    </script>
+</html>
